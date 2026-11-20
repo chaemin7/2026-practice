@@ -189,11 +189,11 @@ def render_analysis() -> None:
     if metric == "타율":
         question = "두 선수의 안타 수는 같지만, 누가 안타를 더 잘 치는 선수일까요?"
         formula = "타율 = 안타 수 ÷ 타수"
-        explanation = "타율은 타수 중 안타를 친 비율을 나타내요. 볼넷은 타수에 들어가지 않으므로 타율 계산에는 넣지 않아요."
+        explanation = "타율은 타수 중 안타를 친 비율을 나타내요. 볼넷은 타율 계산 시에는 이용하지 않아요."
     else:
         question = "안타 수가 같더라도 볼넷을 많이 얻는 선수는 더 많이 출루할 수 있을까요?"
         formula = "출루율 = (안타 수 + 볼넷) ÷ (타수 + 볼넷)"
-        explanation = "출루율은 안타와 볼넷으로 출루한 비율이에요. 이번 활동에서는 초등학생 학습을 위해 몸에 맞는 공과 희생플라이는 계산하지 않아요."
+        explanation = "출루율은 안타와 볼넷으로 출루한 비율이에요."
     st.markdown(f'<div class="coach-bubble">“{question}”</div>', unsafe_allow_html=True)
     st.markdown(f'<div class="formula-box"><strong>{formula}</strong><br>{explanation}</div>', unsafe_allow_html=True)
     first, second = st.columns(2)
